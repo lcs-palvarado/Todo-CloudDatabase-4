@@ -11,6 +11,9 @@ struct ItemView: View {
     
     @Binding var currentItem: TodoItem
     
+  //receive a reference to the view model from the parent view.
+    @Bindable var viewModel: TodoListViewModel
+    
     var body: some View {
         Label(
             title: {
@@ -28,8 +31,11 @@ struct ItemView: View {
 }
 
 #Preview {
-    List {
-        ItemView(currentItem: .constant(firstItem))
-        ItemView(currentItem: .constant(secondItem))
+    
+    @State var previewsViewModel = TodoListViewModel()
+    
+    return List {
+        ItemView(currentItem: .constant(firstItem), viewModel: previewsViewModel)
+        ItemView(currentItem: .constant(secondItem), viewModel: previewsViewModel)
     }
 }
