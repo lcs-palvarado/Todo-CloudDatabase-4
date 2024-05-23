@@ -11,18 +11,22 @@ struct ItemView: View {
     
     @Binding var currentItem: TodoItem
     
-  //receive a reference to the view model from the parent view.
-    @Bindable var viewModel: TodoListViewModel
+    //Access the viewmodel through the environment.
+    @Environment(TodoListViewModel.self) var viewModel
     
     var body: some View {
         Label(
             title: {
                 TextField("", text: $currentItem.title, axis: .vertical)
+                    .onSubmit {
+                        viewModel.update(todo: currentItem)
+                    }
             }, icon: {
                 Image(systemName: currentItem.done == true ? "checkmark.circle" : "circle")
                     // Tap to mark as done
                     .onTapGesture {
                         currentItem.done.toggle()
+                        viewModel.update(todo: currentItem)
                     }
                 
             }
@@ -31,11 +35,9 @@ struct ItemView: View {
 }
 
 #Preview {
-    
-    @State var previewsViewModel = TodoListViewModel()
-    
+        
     return List {
-        ItemView(currentItem: .constant(firstItem), viewModel: previewsViewModel)
-        ItemView(currentItem: .constant(secondItem), viewModel: previewsViewModel)
+        ItemView(currentItem: .constant(firstItem))
+        ItemView(currentItem: .constant(secondItem))
     }
 }
