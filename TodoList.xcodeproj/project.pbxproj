@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		473B29392C0770A700BEE4B0 /* NewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B29382C0770A700BEE4B0 /* NewItemView.swift */; };
+		473B293B2C08D6F200BEE4B0 /* TodoItemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B293A2C08D6F200BEE4B0 /* TodoItemImage.swift */; };
 		47A8C90D2BFF9A580019388F /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 47A8C90C2BFF9A580019388F /* Auth */; };
 		47A8C90F2BFF9A580019388F /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 47A8C90E2BFF9A580019388F /* Functions */; };
 		47A8C9112BFF9A580019388F /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 47A8C9102BFF9A580019388F /* PostgREST */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		473B29382C0770A700BEE4B0 /* NewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemView.swift; sourceTree = "<group>"; };
+		473B293A2C08D6F200BEE4B0 /* TodoItemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemImage.swift; sourceTree = "<group>"; };
 		47A8C9182BFF9B560019388F /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
 		47A8C91A2C011CCF0019388F /* AppEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntryView.swift; sourceTree = "<group>"; };
 		47A8C91C2C011D0F0019388F /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				814A08FD2BC41C7800921E4F /* TodoItem.swift */,
+				473B293A2C08D6F200BEE4B0 /* TodoItemImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				815D9D7F2BC413800050957E /* LandingView.swift in Sources */,
 				47A8C9192BFF9B560019388F /* Supabase.swift in Sources */,
 				814A08FC2BC41BC500921E4F /* ItemView.swift in Sources */,
+				473B293B2C08D6F200BEE4B0 /* TodoItemImage.swift in Sources */,
 				814A08FE2BC41C7800921E4F /* TodoItem.swift in Sources */,
 				47A8C91B2C011CCF0019388F /* AppEntryView.swift in Sources */,
 				815D9D7D2BC413800050957E /* TodoListApp.swift in Sources */,
